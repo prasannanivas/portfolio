@@ -1,0 +1,40 @@
+.navigation{
+    background-color: rgb(36, 36, 36);
+    width: 90vw;
+    margin: 2vh 5vw;
+    border-radius: 10px;
+    position: fixed;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.navigation--container--logo{
+    width: 40%;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    padding-left: 2%;
+    align-items: flex-start;
+    font-weight: 1000;
+    text-transform: uppercase;
+    border-radius: 25px;
+    color: white
+}
+
+.navigation--items{
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    color: white;
+    list-style-type: none;
+}
+
+.hidden-navbar{
+    transform: translateY(-20vh);
+}
