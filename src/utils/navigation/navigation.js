@@ -26,6 +26,7 @@ useEffect(() => {
     window.removeEventListener("scroll", handleNavigation);
   };
 }, [handleNavigation]);
+
   return (
     <div className={`navigation ${!navbar && 'hidden-navbar'}`} >
             <div className='navigation--container--logo'>

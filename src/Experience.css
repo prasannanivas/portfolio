@@ -1,0 +1,68 @@
+@keyframes experience{
+    0%   { left: -200vw}
+    20%  { left: -175vw}
+    40%  { left: -150vw}
+    50%  { left: -125vw}
+    60% { left: -100vw;}
+    70% { left: -75vw;}
+    80% { left: -50vw;}
+    90% { left: -25vw;}
+    100% { left: 0vw;}
+  }
+  
+.skills-and-experience-container{
+    height: max-content;
+}
+
+.experience--container{
+    margin-top: 20vh;
+    text-align: center;
+    position: sticky;
+    top:15vh;
+    height: 40vh;
+}
+
+.experience--mover{
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    height: 15vh;
+    width: 300vw;
+    align-items: center;
+    justify-content: space-evenly;
+    animation-name: experience;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+}
+
+.experience--mover span img{
+    width: 200px;
+    height: 10vh;
+}
+
+.skills{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.skill{
+    height: 55vh;
+    width: 20vw;
+    position: sticky;
+    top: 40%;
+    margin: auto;
+    margin-bottom: 20vh;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill:last-child{
+    margin-bottom: 20vh;
+}
+

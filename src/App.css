@@ -1,10 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
-    font-family: sans-serif;
+    font-family: 'Comfortaa', cursive;
+    
 }
 body{
     background-color: black;
-    height: 200vh;
+    height: 600vh;
+    overflow-x: hidden;
+}
+
+.header{
+    height: 300vh;
+    text-align: center;
+}
+
+.player{
+    position: sticky;
+    background-color: rgba(60, 58, 58, 0.675);
+    top:5vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    opacity: 0.3;
+}
+
+h1{
+    color: azure;
+}
+
+p{
+    color: aliceblue;
 }
