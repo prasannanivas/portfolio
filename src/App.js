@@ -1,17 +1,17 @@
 import './App.css';
 import Navigation from './utils/navigation/navigation'
 import React, { useRef, useCallback, useState, useEffect } from 'react';
-import { Controller, Scene } from 'react-scrollmagic';
 import ReactPlayer from 'react-player'
-import myvideo from './videos/vid.MOV';
+import myvideo from './videos/earth.mp4';
 import SplitText from './test';
 import Experience from './Experience';
 import Certificates from './Certificates';
+import Backtotop from './utils/footer/Backtotop';
+import Aboutme from './Aboutme';
 
 
 function App() {
   const videoRef = useRef(null);
-  const scrollREf = useRef(null);
 
   const [y, setY] = useState(window.scrollY);
 
@@ -35,10 +35,12 @@ return () => {
   return (
     <div className="App">
       <Navigation/>
+      <Backtotop/>
         <div className='header'>
           <ReactPlayer className="player" width={"100vw"} height={"100vh"} z-index={-1} url={myvideo} playing={false} ref={videoRef}/>
           <SplitText/>
         </div>
+        <Aboutme/>
         <Experience/>
         <Certificates/>
        

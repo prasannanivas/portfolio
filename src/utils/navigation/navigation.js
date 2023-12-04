@@ -21,6 +21,11 @@ const handleNavigation = useCallback(
 useEffect(() => {
   setY(window.scrollY);
   window.addEventListener("scroll", handleNavigation);
+  document.addEventListener('mousemove', event => {
+    if(event.clientY <=50){
+      setNavbar(true)
+    }    
+})
 
   return () => {
     window.removeEventListener("scroll", handleNavigation);
@@ -30,12 +35,13 @@ useEffect(() => {
   return (
     <div className={`navigation ${!navbar && 'hidden-navbar'}`} >
             <div className='navigation--container--logo'>
-                Nivas.dev
+                <a href = "#"> NIVAS.DEV </a>
             </div>
             <ul className='navigation--items'>
-                <li>About</li>
-                <li>Profile</li>
-                <li>GitHub</li>
+                <li> <a href = "#skills-and-experience-container"> Skills </a></li>
+                <li> <a href = "#certificates-and-obtained-container">Certificates</a></li>
+                <li> <a href = "#Aboutme">About Me</a></li>
+                <li><a href="https://github.com/prasannanivas?tab=repositories">GitHub</a></li>
             </ul>
     </div>
   )

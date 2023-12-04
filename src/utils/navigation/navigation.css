@@ -39,3 +39,24 @@
 .hidden-navbar{
     transform: translateY(-20vh);
 }
+.navigation--items li a{
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.navigation--items li a:hover{
+    background-color: azure;
+    color: black;
+}
+
+.navigation--container--logo a{
+    text-decoration: none;
+    color: white;
+}
+
+
+a:active{
+    color: aquamarine!important;
+}

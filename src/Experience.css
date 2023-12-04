@@ -10,8 +10,15 @@
     100% { left: 0vw;}
   }
   
-.skills-and-experience-container{
+#skills-and-experience-container{
     height: max-content;
+}
+
+
+#skills-and-experience-container p{
+    font-family: cursive;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
 }
 
 .experience--container{
@@ -20,6 +27,7 @@
     position: sticky;
     top:15vh;
     height: 40vh;
+    opacity: 0;
 }
 
 .experience--mover{
@@ -42,6 +50,25 @@
     height: 10vh;
 }
 
+@keyframes wipeenter {
+    0% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1; 
+    }
+}
+
+
+.intersecting-animation{
+    animation: wipeenter 1s 1;
+    animation-fill-mode: both;
+    transition: all 0.5s;
+}
+
 .skills{
     position: relative;
     display: flex;
@@ -58,8 +85,24 @@
     border-radius: 20px;
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    
+}
+
+.skill h3{
+    font-size: 30px;
+    margin-bottom: 10%;
+    color: black;
+}
+
+.skill img{
+    width: 70%;
+    height: 50%;
+    border-radius: 50%;
+
 }
 
 .skill:last-child{

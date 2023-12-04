@@ -10,7 +10,7 @@
     100% { left: 0vw;}
   }
   
-.certificates-and-obtained-container{
+  #certificates-and-obtained-container{
     height: max-content;
     margin-top: 30vh;
 }
@@ -21,6 +21,7 @@
     position: sticky;
     top:15vh;
     height: 40vh;
+    opacity: 0;
 }
 
 .obtained--mover{
@@ -61,6 +62,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
 }
 
 .certificate:last-child{

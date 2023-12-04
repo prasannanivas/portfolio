@@ -42,12 +42,8 @@ function Certificates() {
     ];
     
     
-    
-    // You can access the colors in the array like this:
-    console.log(darkBeautifulColorsRGB[0]); // Outputs 'rgb(41, 67, 78)'
-    
   return (
-    <div className="certificates-and-obtained-container">
+    <div id="certificates-and-obtained-container">
       <div className="obtained--container">
         <h1>Certificates</h1>
         <div className="obtained--mover">
@@ -140,22 +136,22 @@ function Certificates() {
             <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="" src = {albertacert} /></a>
           </div>
           <div className="certificate" style={{backgroundColor: darkBeautifulColorsRGB[14] }}>
-            <a href = "https://coursera.org/share/4207dc8fb916082cd64db29a0b8f7c5c" ><img alt="" src = {stanfordcert} /></a>
+            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="" src = {stanfordcert} /></a>
           </div>
           <div className="certificate" style={{backgroundColor: darkBeautifulColorsRGB[14] }}>
-            <a href = "https://coursera.org/share/b4cf0d562b59cab428ebeed22ad86030" ><img alt="" src = {hongkongcert} /></a>
+            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="" src = {hongkongcert} /></a>
           </div>
           <div className="certificate" style={{backgroundColor: darkBeautifulColorsRGB[14] }}>
-            <a href = "" ><img alt="" src = {jiracert} /></a>
+            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="" src = {jiracert} /></a>
           </div>
           <div className="certificate" style={{backgroundColor: darkBeautifulColorsRGB[14] }}>
-            <a href = "" ><img alt="" src = {durgapythoncert} /></a>
+            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="" src = {durgapythoncert} /></a>
           </div>
           <div className="certificate" style={{backgroundColor: darkBeautifulColorsRGB[14] }}>
-            <a href = "" ><img alt="" src = {freecodecamp_backend_cert} /></a>
+            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="" src = {freecodecamp_backend_cert} /></a>
           </div>
           <div className="certificate" style={{backgroundColor: darkBeautifulColorsRGB[14] }}>
-            <a href = "" ><img alt="" src = {awscert} /></a>
+            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="" src = {awscert} /></a>
           </div>
       </div>
     </div>

@@ -1,116 +1,160 @@
-import React from "react";
+import React, { useEffect } from "react";
 import lumellogo from "./images/Lumel-logo.png";
 import zohologo from "./images/zoho-logo.png";
 import toshibalogo from "./images/Toshiba-logo.png";
+import algorithmslogo from "./images/logos/algorithmslogo.png"
+import csslogo from "./images/logos/csslogo.png"
+import dsalogo from "./images/logos/dsalogo.png"
+import gitlogo from "./images/logos/gitlogo.png"
+import javalogo from "./images/logos/Javalogo.png"
+import mongologo from "./images/logos/mongologo.png"
+import nodelogo from "./images/logos/nodelogo.png"
+import ooplogo from "./images/logos/ooplogo.png"
+import pythonlogo from "./images/logos/pythonlogo.png"
+import reactlogo from "./images/logos/reactlogo.png"
+import sqllogo from "./images/logos/sqllogo.png"
+
 import "./Experience.css";
 
 function Experience() {
-    const darkBeautifulColorsRGB = [
-        'rgb(255, 0, 0)',      // Red
-        'rgb(0, 255, 0)',      // Green
-        'rgb(0, 0, 255)',      // Blue
-        'rgb(255, 255, 0)',    // Yellow
-        'rgb(255, 0, 255)',    // Magenta
-        'rgb(0, 255, 255)',    // Cyan
-        'rgb(128, 0, 0)',      // Maroon
-        'rgb(0, 128, 0)',      // Green
-        'rgb(0, 0, 128)',      // Navy
-        'rgb(128, 128, 0)',    // Olive
-        'rgb(128, 0, 128)',    // Purple
-        'rgb(0, 128, 128)',    // Teal
-        'rgb(255, 128, 0)',    // Orange
-        'rgb(128, 255, 0)',    // Lime
-        'rgb(128, 0, 255)',    // Purple
-        'rgb(0, 128, 255)',    // Light Blue
-        'rgb(255, 0, 128)',    // Pink
-        'rgb(128, 255, 255)',  // Light Cyan
-        'rgb(255, 128, 128)',  // Light Red
-        'rgb(128, 255, 128)',  // Light Green
-        'rgb(255, 128, 255)',  // Light Purple
-    ];
-    
-    
-    
-    // You can access the colors in the array like this:
-    console.log(darkBeautifulColorsRGB[0]); // Outputs 'rgb(41, 67, 78)'
+  
+  useEffect(() => {
+
+    var callback = function (entries, observer) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('intersecting-animation')
+        }
+        else{
+          entry.target.classList.remove('intersecting-animation')
+        }
+      });
+    };
+    const observer = new IntersectionObserver(callback);
+    const targets = document.querySelectorAll(".skill, .experience--container, .obtained--container, .certificate") || [];
+    targets.forEach((target) => observer.observe(target));
+
+
+  
+  }, [])
+  const darkBeautifulColorsRGB = [
+      'rgb(255, 204, 204)',   // Light Red
+      'rgb(204, 255, 204)',   // Light Green
+      'rgb(204, 204, 255)',   // Light Blue
+      'rgb(255, 255, 204)',   // Light Yellow
+      'rgb(255, 204, 255)',   // Light Magenta
+      'rgb(204, 255, 255)',   // Light Cyan
+      'rgb(255, 204, 204)',   // Light Maroon
+      'rgb(204, 255, 204)',   // Light Green
+      'rgb(204, 204, 255)',   // Light Navy
+      'rgb(255, 255, 204)',   // Light Olive
+      'rgb(255, 204, 255)',   // Light Purple
+      'rgb(204, 255, 255)',   // Light Teal
+      'rgb(255, 230, 204)',   // Light Orange
+      'rgb(204, 255, 204)',   // Light Lime
+      'rgb(204, 204, 255)',   // Light Purple
+      'rgb(204, 230, 255)',   // Light Light Blue
+      'rgb(255, 204, 230)',   // Light Pink
+      'rgb(204, 255, 255)',   // Light Light Cyan
+      'rgb(255, 204, 204)',   // Light Light Red
+      'rgb(204, 255, 204)',   // Light Light Green
+      'rgb(255, 204, 255)',   // Light Light Purple
+  ];
+  
     
   return (
-    <div className="skills-and-experience-container">
+    <div id="skills-and-experience-container">
       <div className="experience--container">
-        <h1>Experience</h1>
+        <h1>Experience & Skills</h1>
         <div className="experience--mover">
           <span>
             {" "}
-            <img alt="" src={lumellogo} />
+            <img alt = "" src={lumellogo} />
           </span>
           <span>
             {" "}
-            <img alt="" src={zohologo} />
+            <img alt = ""  src={zohologo} />
           </span>
           <span>
-            <img alt="" src={toshibalogo} />
-          </span>
-          <span>
-            {" "}
-            <img alt="" src={lumellogo} />
+            <img alt = ""  src={toshibalogo} />
           </span>
           <span>
             {" "}
-            <img alt="" src={zohologo} />
-          </span>
-          <span>
-            <img alt="" src={toshibalogo} />
+            <img alt = ""  src={lumellogo} />
           </span>
           <span>
             {" "}
-            <img alt="" src={lumellogo} />
+            <img alt = ""  src={zohologo} />
+          </span>
+          <span>
+            <img alt = ""  src={toshibalogo} />
           </span>
           <span>
             {" "}
-            <img alt="" src={zohologo} />
+            <img alt = ""  src={lumellogo} />
           </span>
           <span>
-            <img alt="" src={toshibalogo} />
+            {" "}
+            <img alt = ""  src={zohologo} />
+          </span>
+          <span>
+            <img alt = ""  src={toshibalogo} />
           </span>
         </div>
       </div>
+      
       <h2>Skills</h2>
       <div className="skills">
         <div className="skill-col-1">
           <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[14] }}>
             <h3>React</h3>
+            <img alt = "" src = {reactlogo}/>
           </div>
           <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[16]}}>
             <h3>Node JS</h3>
+            <img alt = "" src = {nodelogo}/>
           </div>
           <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[2]}}>
             <h3>CSS</h3>
+            <img alt = "" src = {csslogo}/>
           </div>
           <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[10]}}>
             <h3>Java</h3>
+            <img alt = "" src = {javalogo}/>
           </div>
+          <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[6]}}>
+          <h3>Python</h3>
+          <img alt = "" src = {pythonlogo}/>
+        </div>
         </div>
         <div className="skill-col-2">
           <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[4]}}>
           <h3>OOP</h3>
+          <img alt = "" src = {ooplogo}/>
         </div>
         <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[15]}}>
           <h3>Data Structures</h3>
+          <img alt = "" src = {dsalogo}/>
         </div>
         <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[6]}}>
           <h3>Algorithms</h3>
+          <img alt = "" src = {algorithmslogo}/>
+        </div>
+        <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[16]}}>
+          <h3>Git</h3>
+          <img alt = "" src = {gitlogo}/>
         </div>
           </div>
           <div className="skill-col-3">
           <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[7]}}>
           <h3>MongoDB</h3>
+          <img alt = "" src = {mongologo}/>
         </div>
         <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[9]}}>
           <h3>SQL</h3>
+          <img alt = "" src = {sqllogo}/>
         </div>
-          </div>
-       
-       
+        </div>
       </div>
     </div>
   );

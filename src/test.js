@@ -51,7 +51,6 @@ const SectionWipes2Styled = styled.div`
 
 const SectionWipes2 = (props) => 
 { 
-  console.log("here", props.children)
   return (
   <SectionWipes2Styled>
     <Controller>
