@@ -10,7 +10,7 @@ function Aboutme() {
         <p>
           With a solid foundation in computer engineering, my professional
           journey began with a firmware development internship at Toshiba, where
-          I honed my skills in embedded systems. This experience laid the
+          I honed developed a React application to display and interact with the metrics. This experience laid the
           groundwork for a transition to the dynamic realm of web development.
           Joining Lumel Technologies as a React Developer, I rapidly evolved
           into a full-stack developer, proficient in React, Node.js, MongoDB,
@@ -19,8 +19,7 @@ function Aboutme() {
           and containerized application development. During my tenure, I
           embraced Agile methodologies, ensuring adaptive and collaborative
           development processes. Prior to this, my summer internship at ZOHO
-          equipped me with expertise in Java, Spring technologies, and design
-          patterns. My diverse experiences collectively reflect a passion for
+          equipped me with expertise in Java. My diverse experiences collectively reflect a passion for
           continuous learning, adaptability, and a commitment to staying at the
           forefront of technology trends. As I navigate this dynamic field, I am
           enthusiastic about contributing to innovative solutions and pursuing
