@@ -133,26 +133,26 @@ function Certificates() {
       <h2>certificates</h2>
       <div className="certificates">
           <div className="certificate" style={{backgroundColor: darkBeautifulColorsRGB[14] }}>
-            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="" src = {albertacert} /></a>
+            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="Alberta certification" src = {albertacert} /></a>
           </div>
           <div className="certificate" style={{backgroundColor: darkBeautifulColorsRGB[14] }}>
-            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="" src = {stanfordcert} /></a>
+            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="stanford certificate" src = {stanfordcert} /></a>
           </div>
           <div className="certificate" style={{backgroundColor: darkBeautifulColorsRGB[14] }}>
-            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="" src = {hongkongcert} /></a>
+            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="U of HK" src = {hongkongcert} /></a>
           </div>
           <div className="certificate" style={{backgroundColor: darkBeautifulColorsRGB[14] }}>
-            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="" src = {jiracert} /></a>
+            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="Jira" src = {jiracert} /></a>
           </div>
           <div className="certificate" style={{backgroundColor: darkBeautifulColorsRGB[14] }}>
-            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="" src = {durgapythoncert} /></a>
+            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="Python durgasoft" src = {durgapythoncert} /></a>
           </div>
           <div className="certificate" style={{backgroundColor: darkBeautifulColorsRGB[14] }}>
-            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="" src = {freecodecamp_backend_cert} /></a>
+            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="freecodecamp - backend" src = {freecodecamp_backend_cert} /></a>
           </div>
-          <div className="certificate" style={{backgroundColor: darkBeautifulColorsRGB[14] }}>
-            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="" src = {awscert} /></a>
-          </div>
+          {/*<div className="certificate" style={{backgroundColor: darkBeautifulColorsRGB[14] }}>
+            <a href = "https://coursera.org/share/198e0abdcd2af43e5a2baee755a52bdd" ><img alt="AWS" src = {awscert} /></a>
+  </div>*/}
       </div>
     </div>
   );

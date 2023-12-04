@@ -41,7 +41,9 @@ useEffect(() => {
                 <li> <a href = "#skills-and-experience-container"> Skills </a></li>
                 <li> <a href = "#certificates-and-obtained-container">Certificates</a></li>
                 <li> <a href = "#Aboutme">About Me</a></li>
-                <li><a href="https://github.com/prasannanivas?tab=repositories">GitHub</a></li>
+                <li> <a href = "#projects">Projects</a></li>
+
+                <li><a href="https://github.com/prasannanivas?tab=repositories" target="_blank">GitHub</a></li>
             </ul>
     </div>
   )
