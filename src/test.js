@@ -73,7 +73,7 @@ const SectionWipes2 = (props) =>
               scale: 2,
             }}
           >
-            <section className="panel intro"><span>Welcome</span> </section>
+            <section className="panel intro"><span>I'm Prasanna Nivas</span> </section>
           
           </Tween>
           
@@ -81,20 +81,20 @@ const SectionWipes2 = (props) =>
             from={{ x: '-100%' }}
             to={{ x: '0%' }}
           >
-            <section className="panel name"><span>I'm Prasanna Nivas</span></section>
+            <section className="panel name"><span>Full Stack Software Developer</span></section>
           </Tween>
 
           <Tween
             from={{ x: '100%' }}
             to={{ x: '-100%' }}
           >
-            <section className="panel react-dev"><span> <del>React Developer</del></span></section>
+            <section className="panel react-dev"><span> <del></del></span></section>
           </Tween>
           <Tween
             from={{ y: '-100%' }}
             to={{ y: '0%'}}
           >
-            <section className="panel full-dev"><span>Full Stack Developer</span></section>
+            <section className="panel full-dev"><span></span></section>
           </Tween>
         </Timeline>
       </Scene>
