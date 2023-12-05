@@ -75,10 +75,10 @@ function Projects() {
                 <p>{projectObject.description}</p> <hr/>
                 <p>{projectObject.keyFeatures}</p><hr/>
                 {projectObject.githublink && (
-                 <> <a href={projectObject.githublink} target="_blank">Github link</a> <hr/></>
+                 <> <a href={projectObject.githublink} target="_blank" rel="noopener noreferrer">Github link</a> <hr/></>
                 )}
                 {projectObject.projectlink && (
-                 <> <a href={projectObject.projectlink} target="_blank">Project URL</a> <hr/></>
+                 <> <a href={projectObject.projectlink} target="_blank" rel="noopener noreferrer">Project URL</a> <hr/></>
                 )}
               </div>
             </div>

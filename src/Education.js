@@ -24,7 +24,7 @@ function Education() {
     <div id="education">
       <h1>Education</h1>
       {educationData.map((ed) => (
-        <div style = {{display:'flex', width:"95%", margin:"2.5%",   backgroundColor: "rgb(89, 21, 154)"}}>
+        <div style = {{display:'flex', width:"95%", margin:"2.5%",   backgroundColor: "rgb(21, 14, 54)"}}>
           <div className="edu-details" key={ed.Degree}>
             <h1>
               <FaGraduationCap /> {ed.Institution}
