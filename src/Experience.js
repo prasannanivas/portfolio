@@ -31,7 +31,7 @@ function Experience() {
       });
     };
     const observer = new IntersectionObserver(callback);
-    const targets = document.querySelectorAll(".skill, .experience--container, .obtained--container, .certificate") || [];
+    const targets = document.querySelectorAll(".skill, .experience--container, .obtained--container, .certificate, .edu-details, #Aboutme") || [];
     targets.forEach((target) => observer.observe(target));
 
 

@@ -10,6 +10,7 @@ import Backtotop from "./utils/footer/Backtotop";
 import Aboutme from "./Aboutme";
 import Projects from "./Projects";
 import Footer from "./Footer";
+import Education from "./Education";
 
 function App() {
   const videoRef = useRef(null);
@@ -51,6 +52,7 @@ function App() {
         <SplitText />
       </div>
       <Aboutme />
+      <Education/>
       <Experience />
       <Certificates />
       <Projects />

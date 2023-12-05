@@ -1,0 +1,30 @@
+#education{
+    background-color: rgb(0, 47, 88);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5vw 0vh;
+}
+
+.edu-details{
+    width: 60vw;
+    padding: 0vw 2.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#education .edu-details h1{
+    color: rgb(255, 255, 255);
+}
+
+.Map{
+    width: 40vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
