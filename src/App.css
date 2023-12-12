@@ -6,7 +6,6 @@
     padding: 0%;
     font-family: 'Comfortaa', cursive;
     color: white;
-    overflow-x: hidden;
     
 }
 body{
@@ -38,31 +37,6 @@ p{
     color: aliceblue;
 }
 
-/* Hidden navigation for small screens */
-.hidden-navbar {
-    transform: translateY(-20vh);
-}
-
-.navigation--items li a {
-    text-decoration: none;
-    color: white;
-    padding: 3px;
-    border-radius: 5px;
-}
-
-.navigation--items li a:hover {
-    background-color: azure;
-    color: black;
-}
-
-.navigation--container--logo a {
-    text-decoration: none;
-    color: white;
-}
-
-a:active {
-    color: aquamarine !important;
-}
 
 .mobile-intro{
     display: none;
@@ -70,6 +44,10 @@ a:active {
 
 /* Media query for screens smaller than 600px */
 @media (max-width: 600px) {
+
+    *{
+        overflow-x: hidden;
+    }
     .header, .player{
         display: none;
     }

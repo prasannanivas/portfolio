@@ -1,7 +1,5 @@
 #projects .project-contents{
   padding-bottom: .3vh;
-  margin-bottom: 10vh;
-  overflow: hidden;
 }
 
 
@@ -74,6 +72,11 @@ p{
     #projects{
         font-size: small;
     }
+
+    #projects .project-contents{
+        margin-bottom: 10vh;
+        overflow: hidden;
+      }
     #projects .project-contents h1{
         position: relative;
     }
