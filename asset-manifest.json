@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.8f99e3df.css",
-    "main.js": "/portfolio/static/js/main.e83b9898.js",
+    "main.css": "/portfolio/static/css/main.9186356b.css",
+    "main.js": "/portfolio/static/js/main.35def824.js",
     "static/media/thalapakattu1.png": "/portfolio/static/media/thalapakattu1.157201ba9026977f9353.png",
     "static/media/thalapakattu2.png": "/portfolio/static/media/thalapakattu2.bfbe007aacf8da0f1735.png",
     "static/media/Aboutme.jpeg": "/portfolio/static/media/Aboutme.dad9d97a882165c7bc4d.jpeg",
@@ -37,11 +37,11 @@
     "static/media/gitlogo.png": "/portfolio/static/media/gitlogo.6a0e5412b0aac8797211.png",
     "static/media/mongologo.png": "/portfolio/static/media/mongologo.b613ca429ea4d7714d2f.png",
     "index.html": "/portfolio/index.html",
-    "main.8f99e3df.css.map": "/portfolio/static/css/main.8f99e3df.css.map",
-    "main.e83b9898.js.map": "/portfolio/static/js/main.e83b9898.js.map"
+    "main.9186356b.css.map": "/portfolio/static/css/main.9186356b.css.map",
+    "main.35def824.js.map": "/portfolio/static/js/main.35def824.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f99e3df.css",
-    "static/js/main.e83b9898.js"
+    "static/css/main.9186356b.css",
+    "static/js/main.35def824.js"
   ]
 }
