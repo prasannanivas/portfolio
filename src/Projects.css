@@ -1,5 +1,7 @@
 #projects .project-contents{
   padding-bottom: .3vh;
+  margin-bottom: 10vh;
+  overflow: hidden;
 }
 
 
@@ -65,4 +67,41 @@ h3{
 p{
 
     font-size: larger;
+}
+
+
+@media (max-width: 600px) {
+    #projects{
+        font-size: small;
+    }
+    #projects .project-contents h1{
+        position: relative;
+    }
+    
+    #projects .project-contents .project{
+        position: relative;
+        flex-direction: column;
+        width: 100vw;
+        height: 200vh;
+        margin: 0%;
+        
+    
+    }
+    #projects .project-contents .project .project-explanation{
+        width: 90%;
+    }
+    #projects .project-contents .project:nth-of-type(2){
+    
+        flex-direction: column;
+    
+    }
+
+    #projects .project-contents .project .project-image{
+        width: 90%;
+    }
+    #projects .project-contents .project .project-image img{
+        width: 90vw;
+        height: 30vh;
+    }
+
 }

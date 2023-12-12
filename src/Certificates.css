@@ -73,3 +73,24 @@
     width: 50vw;
     height: 55vh;
 }
+
+@media (max-width: 600px) {
+
+    .obtained--mover span img{
+        width: 80px;
+        height: 40px;
+    }
+    .certificate{
+        display: block;
+        position: relative;
+        width: 95vw;
+        height: 55vw;
+    }
+    .certificates{
+        display: block;
+    }
+    .certificate a img{
+        width: 95vw;
+        height: 45vh;
+    }
+}

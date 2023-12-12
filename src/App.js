@@ -51,6 +51,15 @@ function App() {
         />
         <SplitText />
       </div>
+      <div className = "mobile-intro">
+          <span>
+              Hi, I'm Prasanna Nivas
+          </span>
+          <br/>
+          <span>
+            Full Stack Developer
+          </span>
+        </div>
       <Aboutme />
       <Education/>
       <Experience />

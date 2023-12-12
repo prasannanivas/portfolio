@@ -60,3 +60,56 @@
 a:active{
     color: aquamarine!important;
 }
+
+
+/* Hidden navigation for small screens */
+.hidden-navbar {
+    transform: translateY(-20vh);
+}
+
+.navigation--items li a {
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.navigation--items li a:hover {
+    background-color: azure;
+    color: black;
+}
+
+.navigation--container--logo a {
+    text-decoration: none;
+    color: white;
+}
+
+a:active {
+    color: aquamarine !important;
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    .navigation {
+        flex-direction: column;
+        height: auto;
+        position: relative
+    }
+
+    .navigation--container--logo,
+    .navigation--items {
+        width: 100%;
+    }
+
+    .navigation--container--logo {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navigation--items {
+        display: block;
+        padding: 20px;
+        line-height: 50px;
+    }
+
+}

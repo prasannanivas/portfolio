@@ -1,6 +1,7 @@
 #Aboutme{
     margin-top: 10vh;
     text-align: center;
+    position: relative;
 }
 
 #Aboutme .contents{
@@ -21,4 +22,33 @@
     width: 20%;
     height: 20%;
     border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+
+    #Aboutme{
+        margin-top: 10vh;
+        text-align: center;
+       
+    }
+
+    #Aboutme .contents{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    #Aboutme .contents p{
+        width: 100vw
+    }
+    
+    #Aboutme .contents img{
+        width: 20%;
+        height: 20%;
+        border-radius: 50%;
+    }
+
+
 }

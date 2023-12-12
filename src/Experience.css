@@ -109,3 +109,18 @@
     margin-bottom: 20vh;
 }
 
+@media (max-width: 600px) {
+   
+    .experience--mover span img{
+        width: 100px;
+        height: 50px;
+    }
+    .skill{
+        position: relative;
+        width: 90vw;
+        height: 40vh;
+    }
+    .skills{
+        display: block;
+    }
+}
