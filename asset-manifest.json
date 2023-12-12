@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.9186356b.css",
+    "main.css": "/portfolio/static/css/main.7c9f4bab.css",
     "main.js": "/portfolio/static/js/main.35def824.js",
     "static/media/thalapakattu1.png": "/portfolio/static/media/thalapakattu1.157201ba9026977f9353.png",
     "static/media/thalapakattu2.png": "/portfolio/static/media/thalapakattu2.bfbe007aacf8da0f1735.png",
@@ -37,11 +37,11 @@
     "static/media/gitlogo.png": "/portfolio/static/media/gitlogo.6a0e5412b0aac8797211.png",
     "static/media/mongologo.png": "/portfolio/static/media/mongologo.b613ca429ea4d7714d2f.png",
     "index.html": "/portfolio/index.html",
-    "main.9186356b.css.map": "/portfolio/static/css/main.9186356b.css.map",
+    "main.7c9f4bab.css.map": "/portfolio/static/css/main.7c9f4bab.css.map",
     "main.35def824.js.map": "/portfolio/static/js/main.35def824.js.map"
   },
   "entrypoints": [
-    "static/css/main.9186356b.css",
+    "static/css/main.7c9f4bab.css",
     "static/js/main.35def824.js"
   ]
 }
