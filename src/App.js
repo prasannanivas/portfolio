@@ -14,32 +14,27 @@ import Education from "./Education";
 
 function App() {
   const videoRef = useRef(null);
-
-  const [y, setY] = useState(window.scrollY);
-
-  const handleNavigation = useCallback(
-    (e) => {
-      const window = e.currentTarget;
-      setY(window.scrollY);
-      videoRef && videoRef.current.seekTo(y / 2000, "fraction");
-    },
-    [y]
-  );
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    setY(window.scrollY);
-    window.addEventListener("scroll", handleNavigation);
-
-    return () => {
-      window.removeEventListener("scroll", handleNavigation);
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
     };
-  }, [handleNavigation]);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Calculate opacity and transform based on scroll
+  const opacity = Math.max(1 - scrollY / 500, 0);
+  const scale = Math.max(1 - scrollY / 2000, 0.95);
+  const translateY = -scrollY * 0.5;
 
   return (
     <div className="App">
       <Navigation />
       <Backtotop />
-      <div className="header">
+      {/* <div className="header">
         <ReactPlayer
           className="player"
           width={"100vw"}
@@ -48,20 +43,22 @@ function App() {
           url={myvideo}
           playing={false}
           ref={videoRef}
-        />
+        /> 
         <SplitText />
+      </div> */}
+      <div
+        className="mobile-intro"
+        style={{
+          opacity: opacity,
+          transform: `translateY(${translateY}px) scale(${scale})`,
+        }}
+      >
+        <span className="intro-name">Hi, I'm Prasanna Nivas</span>
+        <span className="intro-title">Full Stack Developer</span>
       </div>
-      <div className = "mobile-intro">
-          <span>
-              Hi, I'm Prasanna Nivas
-          </span>
-          <br/>
-          <span>
-            Full Stack Developer
-          </span>
-        </div>
+      <div className="intro-spacer"></div>
       <Aboutme />
-      <Education/>
+      <Education />
       <Experience />
       <Certificates />
       <Projects />

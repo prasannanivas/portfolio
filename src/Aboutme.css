@@ -1,53 +1,146 @@
-#Aboutme{
+#Aboutme {
     margin-top: 10vh;
     text-align: center;
     position: relative;
+    padding: 5vh 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
 }
 
-#Aboutme .contents{
+#Aboutme.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#Aboutme h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s,
+        transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+    will-change: opacity, transform;
+}
+
+#Aboutme.animate-in h1 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#Aboutme .contents {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-#Aboutme .contents p{
+#Aboutme .contents p {
     width: 60vw;
-    text-align: center;
-    padding: 5vw;
-    font-style: italic;
-    font-size: larger;
+    text-align: left;
+    padding: 2rem;
+    font-style: normal;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.88);
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s,
+        transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    will-change: opacity, transform;
 }
 
-#Aboutme .contents img{
-    width: 20%;
-    height: 20%;
+#Aboutme.animate-in .contents p {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#Aboutme .contents img {
+    width: 280px;
+    height: 480px;
     border-radius: 50%;
+    opacity: 0;
+    transform: translateX(40px) scale(0.9);
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s,
+        transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s;
+    box-shadow: 0 25px 70px rgba(102, 126, 234, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+    will-change: opacity, transform;
+}
+
+#Aboutme.animate-in .contents img {
+    opacity: 1;
+    transform: translateX(0) scale(1);
 }
 
 @media (max-width: 600px) {
 
-    #Aboutme{
-        margin-top: 10vh;
-        text-align: center;
-       
+    #Aboutme {
+        margin-top: 5vh;
+        padding: 3vh 1rem;
     }
 
-    #Aboutme .contents{
+    #Aboutme h1 {
+        font-size: 2.5rem;
+    }
+
+    #Aboutme .contents {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
         width: 100vw;
+        gap: 2rem;
     }
 
-    #Aboutme .contents p{
-        width: 100vw
+    #Aboutme .contents p {
+        width: 90vw;
+        font-size: 1rem;
+        text-align: left;
+        padding: 1.5rem;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s,
+            transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
     }
-    
-    #Aboutme .contents img{
-        width: 20%;
-        height: 20%;
-        border-radius: 50%;
+
+    #Aboutme.animate-in .contents p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #Aboutme .contents img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 1rem;
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+        transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s,
+            transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s;
+    }
+
+    #Aboutme.animate-in .contents img {
+        opacity: 1;
+        transform: translateY(0) scale(1);
     }
 
 

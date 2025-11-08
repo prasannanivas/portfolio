@@ -1,159 +1,154 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import lumellogo from "./images/Lumel-logo.png";
 import zohologo from "./images/zoho-logo.png";
+import RoostLogo from "./images/logos/roostLogo.png";
 import toshibalogo from "./images/Toshiba-logo.png";
-import algorithmslogo from "./images/logos/algorithmslogo.png"
-import csslogo from "./images/logos/csslogo.png"
-import dsalogo from "./images/logos/dsalogo.png"
-import gitlogo from "./images/logos/gitlogo.png"
-import javalogo from "./images/logos/Javalogo.png"
-import mongologo from "./images/logos/mongologo.png"
-import nodelogo from "./images/logos/nodelogo.png"
-import ooplogo from "./images/logos/ooplogo.png"
-import pythonlogo from "./images/logos/pythonlogo.png"
-import reactlogo from "./images/logos/reactlogo.png"
-import sqllogo from "./images/logos/sqllogo.png"
-
+import algorithmslogo from "./images/logos/algorithmslogo.png";
+import csslogo from "./images/logos/csslogo.png";
+import dsalogo from "./images/logos/dsalogo.png";
+import gitlogo from "./images/logos/gitlogo.png";
+import javalogo from "./images/logos/Javalogo.png";
+import mongologo from "./images/logos/mongologo.png";
+import nodelogo from "./images/logos/nodelogo.png";
+import ooplogo from "./images/logos/ooplogo.png";
+import pythonlogo from "./images/logos/pythonlogo.png";
+import reactlogo from "./images/logos/reactlogo.png";
+import sqllogo from "./images/logos/sqllogo.png";
+import dockerLogo from "./images/logos/dockerLogo.png";
+import kubernetesLogo from "./images/logos/KubernetesLogo.png";
+import oneuplogo from "./images/logos/1up_media_logo.jpeg";
+import awsLogo from "./images/logos/awsLogo.png";
+import reactNativeLogo from "./images/logos/reactnativeLogo.png";
 import "./Experience.css";
 
-function Experience() {
-  
-  useEffect(() => {
+const skills = [
+  { name: "React", icon: reactlogo, color: "#61DAFB", category: "Frontend" },
+  { name: "Node.js", icon: nodelogo, color: "#68A063", category: "Backend" },
+  { name: "Java", icon: javalogo, color: "#f89820", category: "Backend" },
+  { name: "Python", icon: pythonlogo, color: "#3776AB", category: "Language" },
+  { name: "MongoDB", icon: mongologo, color: "#47A248", category: "Database" },
+  { name: "SQL", icon: sqllogo, color: "#336791", category: "Database" },
+  { name: "CSS", icon: csslogo, color: "#1572B6", category: "Frontend" },
+  { name: "Git", icon: gitlogo, color: "#F05032", category: "Tools" },
+  { name: "DSA", icon: dsalogo, color: "#764ba2", category: "Core" },
+  {
+    name: "Algorithms",
+    icon: algorithmslogo,
+    color: "#667eea",
+    category: "Core",
+  },
+  { name: "OOP", icon: ooplogo, color: "#f093fb", category: "Core" },
+  {
+    name: "Docker",
+    icon: dockerLogo,
+    color: "#0999a7ff",
+    category: "Devops",
+  },
+  {
+    name: "Kubernetes",
+    icon: kubernetesLogo,
+    color: "#567df0ff",
+    category: "Devops",
+  },
+  { name: "AWS", icon: awsLogo, color: "#aa6b27ff", category: "Cloud" },
+  {
+    name: "React Native",
+    icon: reactNativeLogo,
+    color: "#3586d3ff",
+    category: "Mobile UI",
+  },
+];
 
-    var callback = function (entries, observer) {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('intersecting-animation')
-        }
-        else{
-          entry.target.classList.remove('intersecting-animation')
+const companies = [
+  { logo: lumellogo, name: "Lumel Technologies" },
+  { logo: zohologo, name: "Zoho" },
+  { logo: toshibalogo, name: "Toshiba" },
+  { logo: oneuplogo, name: "1UP Media" },
+  { logo: RoostLogo, name: "Roost Digital" },
+];
+
+function Experience() {
+  const [visibleSkills, setVisibleSkills] = useState([]);
+  const skillRefs = useRef([]);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const currentRefs = skillRefs.current;
+    const observers = currentRefs.map((ref, index) => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setVisibleSkills((prev) => [...new Set([...prev, index])]);
+          }
+        },
+        { threshold: 0.3, rootMargin: "0px 0px -50px 0px" }
+      );
+
+      if (ref) observer.observe(ref);
+      return observer;
+    });
+
+    return () => {
+      observers.forEach((observer, index) => {
+        if (currentRefs[index]) {
+          observer.unobserve(currentRefs[index]);
         }
       });
     };
-    const observer = new IntersectionObserver(callback);
-    const targets = document.querySelectorAll(".skill, .experience--container, .obtained--container, .certificate, .edu-details, #Aboutme") || [];
-    targets.forEach((target) => observer.observe(target));
+  }, []);
 
-
-  
-  }, [])
-  const darkBeautifulColorsRGB = [
-      'rgb(255, 204, 204)',   // Light Red
-      'rgb(204, 255, 204)',   // Light Green
-      'rgb(204, 204, 255)',   // Light Blue
-      'rgb(255, 255, 204)',   // Light Yellow
-      'rgb(255, 204, 255)',   // Light Magenta
-      'rgb(204, 255, 255)',   // Light Cyan
-      'rgb(255, 204, 204)',   // Light Maroon
-      'rgb(204, 255, 204)',   // Light Green
-      'rgb(204, 204, 255)',   // Light Navy
-      'rgb(255, 255, 204)',   // Light Olive
-      'rgb(255, 204, 255)',   // Light Purple
-      'rgb(204, 255, 255)',   // Light Teal
-      'rgb(255, 230, 204)',   // Light Orange
-      'rgb(204, 255, 204)',   // Light Lime
-      'rgb(204, 204, 255)',   // Light Purple
-      'rgb(204, 230, 255)',   // Light Light Blue
-      'rgb(255, 204, 230)',   // Light Pink
-      'rgb(204, 255, 255)',   // Light Light Cyan
-      'rgb(255, 204, 204)',   // Light Light Red
-      'rgb(204, 255, 204)',   // Light Light Green
-      'rgb(255, 204, 255)',   // Light Light Purple
-  ];
-  
-    
   return (
-    <div id="skills-and-experience-container">
-      <div className="experience--container">
-        <h1>Experience & Skills</h1>
-        <div className="experience--mover">
-          <span>
-            {" "}
-            <img alt = "" src={lumellogo} />
-          </span>
-          <span>
-            {" "}
-            <img alt = ""  src={zohologo} />
-          </span>
-          <span>
-            <img alt = ""  src={toshibalogo} />
-          </span>
-          <span>
-            {" "}
-            <img alt = ""  src={lumellogo} />
-          </span>
-          <span>
-            {" "}
-            <img alt = ""  src={zohologo} />
-          </span>
-          <span>
-            <img alt = ""  src={toshibalogo} />
-          </span>
-          <span>
-            {" "}
-            <img alt = ""  src={lumellogo} />
-          </span>
-          <span>
-            {" "}
-            <img alt = ""  src={zohologo} />
-          </span>
-          <span>
-            <img alt = ""  src={toshibalogo} />
-          </span>
+    <div id="skills-and-experience-container" ref={sectionRef}>
+      <div className="experience-section">
+        <div className="experience-header">
+          <h1>Experience & Expertise</h1>
+          <p className="experience-subtitle">Trusted by Industry Leaders</p>
+        </div>
+
+        <div className="companies-showcase">
+          <div className="companies-track">
+            {[...companies, ...companies, ...companies].map(
+              (company, index) => (
+                <div key={index} className="company-card">
+                  <img src={company.logo} alt={company.name} />
+                </div>
+              )
+            )}
+          </div>
         </div>
       </div>
-      
-      <h2>Skills</h2>
-      <div className="skills">
-        <div className="skill-col-1">
-          <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[14] }}>
-            <h3>React</h3>
-            <img alt = "" src = {reactlogo}/>
-          </div>
-          <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[16]}}>
-            <h3>Node JS</h3>
-            <img alt = "" src = {nodelogo}/>
-          </div>
-          <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[2]}}>
-            <h3>CSS</h3>
-            <img alt = "" src = {csslogo}/>
-          </div>
-          <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[10]}}>
-            <h3>Java</h3>
-            <img alt = "" src = {javalogo}/>
-          </div>
-          <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[6]}}>
-          <h3>Python</h3>
-          <img alt = "" src = {pythonlogo}/>
+
+      <div className="skills-section">
+        <div className="skills-header">
+          <h2>Technical Arsenal</h2>
+          <p className="skills-subtitle">Mastery Across the Full Stack</p>
         </div>
-        </div>
-        <div className="skill-col-2">
-          <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[4]}}>
-          <h3>OOP</h3>
-          <img alt = "" src = {ooplogo}/>
-        </div>
-        <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[15]}}>
-          <h3>Data Structures</h3>
-          <img alt = "" src = {dsalogo}/>
-        </div>
-        <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[6]}}>
-          <h3>Algorithms</h3>
-          <img alt = "" src = {algorithmslogo}/>
-        </div>
-        <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[16]}}>
-          <h3>Git</h3>
-          <img alt = "" src = {gitlogo}/>
-        </div>
-          </div>
-          <div className="skill-col-3">
-          <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[7]}}>
-          <h3>MongoDB</h3>
-          <img alt = "" src = {mongologo}/>
-        </div>
-        <div className="skill" style={{backgroundColor: darkBeautifulColorsRGB[9]}}>
-          <h3>SQL</h3>
-          <img alt = "" src = {sqllogo}/>
-        </div>
+
+        <div className="skills-grid">
+          {skills.map((skill, index) => (
+            <div
+              key={skill.name}
+              ref={(el) => (skillRefs.current[index] = el)}
+              className={`skill-card ${
+                visibleSkills.includes(index) ? "visible" : ""
+              }`}
+              style={{ "--skill-color": skill.color }}
+            >
+              <div className="skill-glow"></div>
+              <div className="skill-content">
+                <div className="skill-icon-wrapper">
+                  <img
+                    src={skill.icon}
+                    alt={skill.name}
+                    className="skill-icon"
+                  />
+                </div>
+                <h3 className="skill-name">{skill.name}</h3>
+                <span className="skill-category">{skill.category}</span>
+              </div>
+              <div className="skill-border"></div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
