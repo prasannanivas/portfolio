@@ -4,6 +4,7 @@ import "./navigation.css";
 function Navigation() {
   const [y, setY] = useState(window.scrollY);
   const [navbar, setNavbar] = useState(true);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleNavigation = useCallback(
     (e) => {
@@ -32,38 +33,70 @@ function Navigation() {
     };
   }, [handleNavigation]);
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <div className={`navigation ${!navbar && "hidden-navbar"}`}>
       <div className="navigation--container--logo">
         <a href="#top"> NIVAS.DEV </a>
       </div>
-      <ul className="navigation--items">
-        <li>
-          {" "}
-          <a href="#Aboutme">About Me</a>
-        </li>
-        <li>
-          {" "}
-          <a href="#education">Education</a>
-        </li>
-        <li>
-          {" "}
-          <a href="#skills-and-experience-container"> Skills </a>
-        </li>
-        <li>
-          {" "}
-          <a href="#certificates-and-obtained-container">Certificates</a>
-        </li>
 
+      <button
+        className={`hamburger ${mobileMenuOpen ? "active" : ""}`}
+        onClick={toggleMobileMenu}
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul
+        className={`navigation--items ${
+          mobileMenuOpen ? "mobile-menu-open" : ""
+        }`}
+      >
         <li>
-          {" "}
-          <a href="#projects">Projects</a>
+          <a href="#Aboutme" onClick={closeMobileMenu}>
+            About Me
+          </a>
+        </li>
+        <li>
+          <a href="#education" onClick={closeMobileMenu}>
+            Education
+          </a>
+        </li>
+        <li>
+          <a href="#skills-and-experience-container" onClick={closeMobileMenu}>
+            {" "}
+            Skills{" "}
+          </a>
+        </li>
+        <li>
+          <a
+            href="#certificates-and-obtained-container"
+            onClick={closeMobileMenu}
+          >
+            Certificates
+          </a>
+        </li>
+        <li>
+          <a href="#projects" onClick={closeMobileMenu}>
+            Projects
+          </a>
         </li>
         <li>
           <a
             href="https://github.com/prasannanivas?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={closeMobileMenu}
           >
             GitHub
           </a>

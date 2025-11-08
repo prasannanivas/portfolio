@@ -128,9 +128,6 @@ p {
 /* Media query for screens smaller than 600px */
 @media (max-width: 600px) {
 
-    * {
-        overflow-x: hidden;
-    }
 
     .header,
     .player {
